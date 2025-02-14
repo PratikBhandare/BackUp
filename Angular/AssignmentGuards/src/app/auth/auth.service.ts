@@ -9,9 +9,12 @@ export class AuthService {
 
   constructor(private router:Router) { }
   isLogged!:boolean;
+  isLoggedSubject=new BehaviorSubject<boolean>(false);
+  isLogged$=this.isLoggedSubject.asObservable();
   isAdmin!: boolean;
   isManager!:boolean;
-  loggedUser:any;
+  loggedUserSubject=new BehaviorSubject<{}>({});
+  loggedUser$=this.loggedUserSubject.asObservable();
 
 
   
@@ -23,29 +26,22 @@ export class AuthService {
   
   ]
 
-  // logIn(user:any){
-  //   this.isLogged=true;
-    
-  // }
-  getLoggedUser(User:any){
-    this.loggedUser=User;
-    console.log("from auth service logged user",this.loggedUser);
-    return this.loggedUser;
-  }
 
   logIn(User:any) {
-    // this.userService.logIn()
-    console.log(User)
+
+    console.log(User);
+    
     
 
     let validFlag: boolean = false;
     for (let i = 0; i < this.users.length; i++) {
       if (this.users[i].email === User.email && this.users[i].password === User.password) {
-        // this.userService.logIn();
+
         this.isLogged=true;
+        this.loggedUserSubject.next(this.users[i]);
         alert("Login Succesful !!");
         validFlag = true;
-        // this.LogInForm.reset();
+
         if (this.users[i].role === "Admin") {
           this.isAdmin = true;
         } else if (this.users[i].role === "Manager") {
@@ -65,6 +61,7 @@ export class AuthService {
 
   logOut(){
     this.isLogged=false;
+    this.isLoggedSubject.next(false)
     
     this.isAdmin=false;
  

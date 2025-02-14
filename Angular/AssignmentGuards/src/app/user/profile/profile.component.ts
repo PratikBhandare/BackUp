@@ -10,17 +10,15 @@ import { Router } from '@angular/router';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent implements OnInit{
+export class ProfileComponent {
   person:any;
   constructor(private authservice:AuthService, private userService:UserService, private router:Router){
-    // this.person=this.userService.getProfile();
-    // console.log("This is Logged Person !!\n",this.person)
+    this.authservice.loggedUser$.subscribe(val=>{
+      this.person=val;
+    })
   }
 
-  ngOnInit(): void {
-    this.person=this.userService.getProfile();
-    console.log("Profile component This is Logged Person !!\n",this.person)
-  }
+  
 
   logOut(){
     this.authservice.logOut();

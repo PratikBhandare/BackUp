@@ -1,3 +1,4 @@
+rose
 class pack{
     constructor(id,weight,destination){
         this.id=id;

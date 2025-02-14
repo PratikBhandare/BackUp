@@ -9,17 +9,16 @@ import { ProductService } from '../../product/product.service';
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
-export class CartComponent implements OnInit{
+export class CartComponent{
 
   cart:any[]=[];
 
   constructor(private productService:ProductService){
+    this.productService.cart$.subscribe(val=>{
+      this.cart=val;
+    })
     
 
-  }
-
-  ngOnInit(): void {
-    this.cart=this.productService.cart;
   }
 
   incr(id:number){

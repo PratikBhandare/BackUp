@@ -12,10 +12,13 @@ import { OrderService } from '../../order/order.service';
 })
 export class ProductlistComponent implements OnInit,OnChanges{
   constructor(private authService:AuthService, private productService:ProductService,private orderService:OrderService){
+    this.authService.loggedUser$.subscribe(val=>{
+      this.loggedUser=val;
+    })
     
 
   }
-  loggedUserEmail:string='';
+  loggedUser!:any;
   pdetails:boolean=false;
   products:any[]=[];
   filteredProducts:any[]=[];

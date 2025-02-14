@@ -37,7 +37,6 @@ export class LoginComponent {
 
   login(){
     let data=this.getData();
-    this.userService.getLoggedUser(data);
     this.userService.logIn(data);
   }
 
