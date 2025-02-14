@@ -1,0 +1,12 @@
+<p>cart works!</p>
+<!-- <p>{{n}}</p> -->
+ <!-- <p>{{cartList[0].name}}</p> -->
+
+@for(food of cartList; track food.id){
+    <h1>Name: {{food.name}}</h1>
+    <h1>Price: {{food.price}}</h1>
+    <h1>id: {{food.id}}</h1>
+    <button [value]="food.id" (click)="removeFromCart(food.id)">Remove From Cart</button>
+}
+
+

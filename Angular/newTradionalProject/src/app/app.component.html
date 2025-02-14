@@ -1,0 +1,27 @@
+<h1 *ngIf="msg">Hello</h1>
+
+<app-order></app-order>
+
+<app-profile></app-profile>
+<app-registration></app-registration>
+<app-login></app-login>
+
+
+
+
+child
+<app-child [child]="msg"></app-child>
+
+<app-child [obj]="{name:'Pratik',id:'1'}"></app-child>
+
+
+Child Accesing Function from Parent
+<app-child [HelloFromParent]="fun"></app-child>
+
+<app-child [child]="msg"></app-child>
+
+
+
+
+
+<!-- <app-sample></app-sample> -->

@@ -1,0 +1,16 @@
+<p>cart works!</p>
+
+
+<div class="product-grid">
+    <div *ngFor="let product of cart" class="product-card">
+        <img src="{{product.img}}" alt="">
+        <p class="name">Name: {{product.name}}</p>
+        <p class="price">Price: {{product.price*product.quantity}}</p>
+        <p>{{product.quantity}}</p>
+        <button (click)="incr(product.id)">+</button>
+        <button (click)="decr(product.id)">-</button>
+    </div>
+</div>
+
+
+

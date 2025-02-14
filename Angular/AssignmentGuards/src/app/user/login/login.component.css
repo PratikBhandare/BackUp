@@ -1,0 +1,68 @@
+/* Style for the form container */
+form {
+    max-width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the labels */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style for the input fields */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  /* Style for the submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the submit button on hover */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style for the signup link */
+  a[routerLink] {
+    display: block;
+    width: fit-content;
+    margin: 20px auto; /* Center horizontally */
+    color: #008CBA;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Style for the signup link on hover */
+  a[routerLink]:hover {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  

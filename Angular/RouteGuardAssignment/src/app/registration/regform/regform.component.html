@@ -1,0 +1,22 @@
+<p>regform works!</p>
+
+
+<form #UserRegForm="ngForm" (ngSubmit)="onSubmit(UserRegForm)">
+    <label for="">Name:</label>
+    <input type="text" name="UserName" ngModel required>
+
+    <label for="">Email:</label>
+    <input type="text" name="Email" ngModel required>
+
+    <label for="">Role:</label>
+    <select name="Role" id="" ngModel required>
+        <option value="Admin">Admin</option>
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+    </select>
+
+    <button type="submit">submit</button>
+</form>
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic List</title>
+</head>
+<body>
+    <h1>Dynamic List</h1>
+    <input type="text" id="itemInput" placeholder="Enter a new item">
+    <button onclick="addItem()">Add Item</button>
+    <ul id="dynamicList"></ul>
+
+    <script>
+        // script.js
+
+function addItem() {
+    // Get the value from the input field
+    const itemInput = document.getElementById('itemInput');
+    const newItemText = itemInput.value;
+
+    // Check if the input is not empty
+    if (newItemText.trim() !== '') {
+        // Create a new list item element
+        const newItem = document.createElement('li');
+        newItem.textContent = newItemText;
+
+        // Add the new list item to the dynamic list
+        const dynamicList = document.getElementById('dynamicList');
+        dynamicList.appendChild(newItem);
+
+        // Clear the input field
+        itemInput.value = '';
+    } else {
+        alert('Please enter a valid item.');
+    }
+}
+
+    </script>
+</body>
+</html>

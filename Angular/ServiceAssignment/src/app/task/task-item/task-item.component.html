@@ -1,0 +1,7 @@
+<!-- <p>task-item works!</p> -->
+<li *ngFor="let task of Data1">
+    <p>Name: {{task.name}}</p>
+    <p>Status: {{task.status}}</p>
+    <p>Priority: {{task.priority}}</p>
+    <button (click)="updateStatus(task.id)" >Update Status</button>
+</li>

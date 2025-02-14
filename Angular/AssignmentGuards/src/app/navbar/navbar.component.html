@@ -1,0 +1,18 @@
+<nav>
+    <div class="logo">
+      <a routerLink="/">My App</a>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="user/profile" routerLinkActive="active-link">Profile</a></li>
+      <li><a routerLink="order/orderList" routerLinkActive="active-link">Orders</a></li>
+      <li><a routerLink="product/productlist" routerLinkActive="active-link">Products</a></li>
+      <li><a routerLink="/order/cart" routerLinkActive="active-link">Cart</a></li>
+      <!-- <li><a routerLink="admin" routerLinkActive="active-link">Admin</a></li> -->
+    </ul>
+    <div class="burger" (click)="toggleNav()">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  

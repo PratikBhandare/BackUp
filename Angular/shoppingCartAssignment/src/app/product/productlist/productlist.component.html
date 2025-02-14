@@ -1,0 +1,16 @@
+<p>productlist works!</p>
+
+<div class="product-grid">
+    <div *ngFor="let product of products" class="product-card">
+        <img src="{{product.img}}" alt="">
+        <p class="name">Name: {{product.name}}</p>
+        <p class="price">Price: {{product.price}}</p>
+        <!-- <button *ngIf="pdetails">Details</button><br><br> -->
+        <button  (click)="addToCart(product.id)">Add to Cart</button>
+    </div>
+</div>
+
+
+
+Cart
+<app-cart></app-cart>

@@ -1,0 +1,15 @@
+<input type="text" name="" id="" style="margin: 20px;" [(ngModel)]="search">
+<p>{{search}}</p>
+<div class="product-grid">
+    <div *ngFor="let product of products" class="product-card">
+        <img src="{{product.img}}" alt="">
+        <p class="name">Name: {{product.name}}</p>
+        <p class="price">Price: {{product.price}}</p>
+        <button *ngIf="pdetails">Details</button><br><br>
+        <button  (click)="addToCart(product.id)" [ngStyle]="pdetails?{background:'green',color:'white'}:{background:'red',color:'white'}">Add to Cart</button>
+    </div>
+</div>
+
+
+
+<button routerLink="/addproduct" *ngIf="pdetails">Add Products</button>

@@ -1,0 +1,28 @@
+        <div class="item">
+                <!-- <div>
+                    <div id="image-div">
+                        <img id="image" src="{{product.url}}" alt="Cannot Load image">
+                    </div>
+                </div> -->
+                <div>
+                    <div class="property">
+                        <h5 id="productName">Name :</h5>
+                        <p>{{product.name}}</p>
+                    </div>
+                    <div class="property">
+                        <h5 id="productCategory">Category :</h5>
+                        <p>{{product.category}}</p>
+                    </div>
+                    <div class="property">
+                        <h5 id="productPrice">Price :</h5>
+                        <p>{{product.price}}</p>
+                    </div>
+                    <div class="property">
+                        <h5 id="ProductRating">Rating :</h5>
+                        <p>{{product.rating}}</p>
+                    </div>
+                </div>
+                <div>
+                    <button (click)="order(product.id)" id="orderButton">View</button>
+                </div>
+        </div>

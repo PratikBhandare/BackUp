@@ -1,0 +1,24 @@
+*{
+    /* margin: 0; */
+    padding: 0;
+}
+body{
+    background-color: rgb(240, 233, 233);
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+.nav img{
+    padding: 10px;
+    align-items: center;
+    background-color: rgb(224, 224, 253);
+    width: 20%;
+    
+}
+#one{
+    opacity: 50%;
+}
+a:hover{
+    color: rgb(127, 170, 170);
+    height: 2rem;
+}

@@ -1,0 +1,42 @@
+<script>
+    class Question{
+    constructor(q,a1,a2,a3,c){
+        this.q=q;
+        this.a1=a1;
+        this.a2=a2;
+        this.a3=a3;
+        this.c=c;
+    }
+}
+
+let score=0;
+let q1=new Question("Question 1","a1","a2","a3","a2");
+let q2=new Question("Question 2","a1","a2","a3","a1");
+let q3=new Question("Question 3","a1","a2","a3","a2");
+let q4=new Question("Question 4","a1","a2","a3","a1");
+let q5=new Question("Question 5","a1","a2","a3","a1");
+let q6=new Question("Question 6","a1","a2","a3","a3");
+let q7=new Question("Question 7","a1","a2","a3","a2");
+let q8=new Question("Question 8","a1","a2","a3","a1");
+let q9=new Question("Question 9","a1","a2","a3","a2");
+let q10=new Question("Question 10","a1","a2","a3","a3");
+
+let questions=[];
+questions.push(q1);
+questions.push(q2);
+questions.push(q3);
+questions.push(q4);
+questions.push(q5);
+questions.push(q6);
+questions.push(q7);
+questions.push(q8);
+questions.push(q9);
+questions.push(q10);
+
+for(i=0;i<questions.length;i++){
+    let ans=prompt(`Question ${i}: ${questions[i].q}\n1.${questions.a1}\n2.${questions.a2}\n3.${questions.a2}`);
+    if(ans==questions[i].c){
+        score++;
+    }
+}
+</script>

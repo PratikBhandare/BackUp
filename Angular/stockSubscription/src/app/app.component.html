@@ -1,0 +1,9 @@
+<button (click)="subscribeToStockPrice()">Subscribe</button>
+
+<div *ngFor="let i of subs">
+  <p>{{latestPrice}}</p>
+</div>
+
+<button (click)="unSubscribe()">unSubscribe</button>
+
+<h2>Subscribers: {{subscribers}}</h2>
